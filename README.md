@@ -2,7 +2,7 @@
 
 Free offline-friendly drill trainer for the Estonian citizenship (kodakondsuse) constitution & citizenship-act exam.
 
-**Live demo:** https://kodakondsuse-eksam.pages.dev/
+**Live demo:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
 
 > **Disclaimer (EN / ET / RU below):** The question bank is a community/study artefact and is **not** kept up to date with official exam changes. Anyone may fork, modify, or republish as they wish. This is **not** an official [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid)/state product. For the real exam, rely on official law texts ([PS](https://www.riigiteataja.ee/akt/PS), [KodS](https://www.riigiteataja.ee/akt/126062025008)) and official materials.
 
@@ -14,7 +14,7 @@ Free offline-friendly drill trainer for the Estonian citizenship (kodakondsuse) 
 A static, mobile-first practice site for the **Eesti Vabariigi põhiseaduse ja kodakondsuse seaduse tundmise eksam** (citizenship exam on the Constitution and Citizenship Act). Estonian questions first; Russian debrief after you answer. Progress stays in your browser (`localStorage`).
 
 ### Try it
-- **Live:** https://kodakondsuse-eksam.pages.dev/
+- **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
 - **This repository:** https://github.com/upyrj/eesti-kodakondsuse-eksam
 
 ### Run locally
@@ -67,7 +67,7 @@ MIT License — see [`LICENSE`](LICENSE).
 Tasuta, võrguühenduseta sobiv treeningleht **Eesti Vabariigi põhiseaduse ja kodakondsuse seaduse tundmise eksami** (kodakondsuseksam) harjutamiseks. Küsimus eesti keeles; pärast vastust vene keeles selgitus. Progress salvestub brauserisse (`localStorage`).
 
 ### Proovi
-- **Live:** https://kodakondsuse-eksam.pages.dev/
+- **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
 - **See repositoorium:** https://github.com/upyrj/eesti-kodakondsuse-eksam
 
 ### Kohalik käivitamine
@@ -113,7 +113,7 @@ MIT litsents — vaata faili [`LICENSE`](LICENSE).
 Бесплатный офлайн-дружественный тренажёр к экзамену на знание **Конституции Эстонской Республики и Закона о гражданстве** (kodakondsuse eksam). Сначала вопрос по-эстонски; после ответа — разбор по-русски. Прогресс хранится в браузере (`localStorage`).
 
 ### Попробовать
-- **Live:** https://kodakondsuse-eksam.pages.dev/
+- **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
 - **Этот репозиторий:** https://github.com/upyrj/eesti-kodakondsuse-eksam
 
 ### Локальный запуск
