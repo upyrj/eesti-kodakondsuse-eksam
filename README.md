@@ -1,155 +1,151 @@
 # kodakondsuse-eksam
 
-Free offline-friendly drill trainer for the Estonian citizenship (kodakondsuse) constitution & citizenship-act exam.
+Drill trainer for the Estonian citizenship exam (Constitution + Citizenship Act).
 
 **Live demo:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
 
-> **Disclaimer (EN / ET / RU below):** The question bank is a community/study artefact and is **not** kept up to date with official exam changes. Anyone may fork, modify, or republish as they wish. This is **not** an official [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid)/state product. For the real exam, rely on official law texts ([PS](https://www.riigiteataja.ee/akt/PS), [KodS](https://www.riigiteataja.ee/akt/126062025008)) and official materials.
+> **Disclaimer (EN / ET / RU below):** Study bank, not kept in sync with official exam changes. Fork and change freely. Not Harno / not the state. For the real exam use [PS](https://www.riigiteataja.ee/akt/PS), [KodS](https://www.riigiteataja.ee/akt/126062025008), and official materials.
 
 ---
 
 ## English
 
 ### What it is
-A static, mobile-first practice site for the **Eesti Vabariigi põhiseaduse ja kodakondsuse seaduse tundmise eksam** (citizenship exam on the Constitution and Citizenship Act). Estonian questions first; Russian debrief after you answer. Progress stays in your browser (`localStorage`).
+A static practice site for the **Eesti Vabariigi põhiseaduse ja kodakondsuse seaduse tundmise eksam**. Question in Estonian; Russian debrief after you answer. Progress stays in the browser (`localStorage`). No server.
 
-### Try it
-- **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
-  On phones, use “Add to Home Screen” / “Install” to use it as an app.
-- **This repository:** https://github.com/upyrj/eesti-kodakondsuse-eksam
+### Links
+- **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/  
+  On a phone: “Add to Home Screen” / “Install” (PWA).
+- **Repository:** https://github.com/upyrj/eesti-kodakondsuse-eksam
 
 ### Run locally
-No build step required for day-to-day use:
+No build step:
 
 ```bash
-# option A — open the file
 open index.html   # or double-click / xdg-open
 
-# option B — any static server
 python3 -m http.server 8080
 # then http://127.0.0.1:8080
 ```
 
-Works on [Cloudflare Pages](https://pages.cloudflare.com/), [Netlify](https://www.netlify.com/), [GitHub Pages](https://pages.github.com/), or any static host: publish the repo root (`index.html` + `data/`).
+Works on [Cloudflare Pages](https://pages.cloudflare.com/), [Netlify](https://www.netlify.com/), [GitHub Pages](https://pages.github.com/), or any static host. Publish the repo root (`index.html`, `data/`; plus icons + manifest for PWA).
 
 ### Question bank
-- Inlined in `index.html` as `QUESTIONS` (what the live site runs).
+- What the live site runs: inlined in `index.html` as `QUESTIONS`.
 - Same bank as a file: `data/drill-bank-quality-v3.json` (525 items).
 
-### Rebuild (brief)
-There is no separate public build pipeline in this package. To change questions:
+### Editing the bank
+No public build script here. Edit `data/drill-bank-quality-v3.json`, then replace the `QUESTIONS = [ ... ]` array in `index.html` (or treat `data/` as the source and embed when you ship).
 
-1. Edit `data/drill-bank-quality-v3.json` (keep the existing item schema).
-2. Re-embed into `index.html` (replace the `QUESTIONS = [ ... ]` array with the updated JSON), **or** keep using the inlined copy and treat `data/` as the editable source of truth before embed.
-3. Refresh in the browser.
+### Fork
+Fork freely. Wording, distractors, accessibility — welcome. Please keep the disclaimer visible.
 
-### Contribute / fork
-Fork freely. Improvements to wording, distractors, accessibility, or packaging are welcome. Please keep the disclaimer visible.
-
-### Provenance / results
-Built with practice items and a consultation presentation used in citizenship-exam prep. Three people who trained with this material scored **23–24 out of 24** on the official exam on **26 September 2026**.
+### Where it came from
+Built from practice items and a consultation presentation for exam prep. Three people who trained with this material scored **23–24 / 24** on the official exam on **26 September 2026**.
 
 ### Credits / sources
-- [Denis Ivanov](https://ivanov.in) — publisher of this site and bank
-- [Grok Bot Tõnu](https://x.ai/bot) — Cursor/Grok Bot assistant that coached and built the drill with [Denis](https://ivanov.in)
-- Law references: [PS](https://www.riigiteataja.ee/akt/PS), [KodS](https://www.riigiteataja.ee/akt/126062025008); exam context: [Harno materials](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) and [Integratsiooni Sihtasutus exam-prep materials](https://integratsioon.ee/kodakondsuseksam) (not affiliated)
+- [Denis Ivanov](https://ivanov.in) — site and bank
+- [Grok Bot Tõnu](https://x.ai/bot) — Cursor/Grok Bot that built the drill with [Denis](https://ivanov.in)
+- Law: [PS](https://www.riigiteataja.ee/akt/PS), [KodS](https://www.riigiteataja.ee/akt/126062025008); exam context: [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) and [Integratsiooni Sihtasutus](https://integratsioon.ee/kodakondsuseksam) (not affiliated)
 
 ### Disclaimer
-The question bank is a **community/study artefact** and is **not** kept up to date with official exam changes. Anyone may fork, modify, or republish. This is **not** an official [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) or Estonian state product. For the real exam, rely on official law texts ([**PS**](https://www.riigiteataja.ee/akt/PS), [**KodS**](https://www.riigiteataja.ee/akt/126062025008)) and official materials.
+This is a **study** bank. It is **not** kept up to date with official exam changes and **not** a [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) or state product. Fork and change as you like. For the real exam, use the official law texts ([**PS**](https://www.riigiteataja.ee/akt/PS), [**KodS**](https://www.riigiteataja.ee/akt/126062025008)) and official materials.
 
 ### License
-MIT License — see [`LICENSE`](LICENSE).
+MIT — see [`LICENSE`](LICENSE).
 
 ---
 
 ## Eesti
 
 ### Mis see on
-Tasuta, võrguühenduseta sobiv treeningleht **Eesti Vabariigi põhiseaduse ja kodakondsuse seaduse tundmise eksami** (kodakondsuseksam) harjutamiseks. Küsimus eesti keeles; pärast vastust vene keeles selgitus. Progress salvestub brauserisse (`localStorage`).
+Staatiline treeningleht **Eesti Vabariigi põhiseaduse ja kodakondsuse seaduse tundmise eksami** (kodakondsuseksam) jaoks. Küsimus eesti keeles; pärast vastust vene keeles selgitus. Progress jääb brauserisse (`localStorage`). Serverit pole.
 
-### Proovi
-- **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
-  Telefonis vali “Lisa avakuvale” / “Installi”, et kasutada seda rakendusena.
-- **See repositoorium:** https://github.com/upyrj/eesti-kodakondsuse-eksam
+### Lingid
+- **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/  
+  Telefonis: “Lisa avakuvale” / “Installi” (PWA).
+- **Repositoorium:** https://github.com/upyrj/eesti-kodakondsuse-eksam
 
 ### Kohalik käivitamine
 Ehitust pole vaja:
 
 ```bash
 open index.html
-# või
+
 python3 -m http.server 8080
+# siis http://127.0.0.1:8080
 ```
 
-Sobib [Cloudflare Pages](https://pages.cloudflare.com/) / [Netlify](https://www.netlify.com/) / [GitHub Pages](https://pages.github.com/) / mis tahes staatiline host (juur: `index.html` + `data/`).
+Sobib [Cloudflare Pages](https://pages.cloudflare.com/), [Netlify](https://www.netlify.com/), [GitHub Pages](https://pages.github.com/) või mis tahes staatiline host. Avalda repo juur (`index.html`, `data/`; PWA jaoks ka ikoonid + manifest).
 
 ### Küsimustepank
-- Sisseehitatud `index.html`-is (`QUESTIONS`).
-- Failina: `data/drill-bank-quality-v3.json` (525 küsimust).
+- Live sait kasutab panka, mis on `index.html`-is (`QUESTIONS`).
+- Sama pank failina: `data/drill-bank-quality-v3.json` (525 küsimust).
 
-### Ümbertegemine (lühidalt)
-Avalikku eraldi build-skripti selles paketis pole. Muuda panka `data/` all, seejärel asenda `QUESTIONS = [ ... ]` massiiv `index.html`-is või hoia `data/` allikatõena enne sisseehitamist.
+### Panga muutmine
+Avalikku build-skripti pole. Muuda `data/drill-bank-quality-v3.json`, siis asenda `QUESTIONS = [ ... ]` massiiv `index.html`-is (või hoia `data/` allikana ja sisseehita enne avaldamist).
 
-### Panusta / fork
-Forki vabalt. Parandused (sõnastus, distraktorid, ligipääsetavus, pakendamine) on oodatud. Palun jäta disclaimer nähtavaks.
+### Fork
+Forki vabalt. Sõnastus, distraktorid, ligipääsetavus — oodatud. Jäta disclaimer nähtavaks.
 
-### Päritolu / tulemused
-Kasutasime treeningülesandeid ja konsultatsiooni esitlust kodakondsuseksami ettevalmistusest. Kolm inimest, kes materjaliga treenisid, said ametlikul eksamil **26. septembril 2026** **23–24 punkti 24-st**.
+### Päritolu
+Tehtud treeningülesannete ja konsultatsiooni esitluse põhjal. Kolm inimest, kes selle materjaliga treenisid, said ametlikul eksamil **26. septembril 2026** **23–24 / 24**.
 
 ### Tunnustus / allikad
-- [Denis Ivanov](https://ivanov.in) — saidi ja panga väljaandja
-- [Grok Bot Tõnu](https://x.ai/bot) — Cursor/Grok Bot abiline, kes treenis ja ehitas driilli koos [Denisega](https://ivanov.in)
-- Õigusviited: [PS](https://www.riigiteataja.ee/akt/PS), [KodS](https://www.riigiteataja.ee/akt/126062025008); eksami kontekst: [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) materjalid ja [Integratsiooni Sihtasutuse eksamiks ettevalmistavad materjalid](https://integratsioon.ee/kodakondsuseksam) (seotud asutusega ei ole)
+- [Denis Ivanov](https://ivanov.in) — sait ja pank
+- [Grok Bot Tõnu](https://x.ai/bot) — Cursor/Grok Bot, kellega [Denis](https://ivanov.in) driilli kokku pani
+- Seadused: [PS](https://www.riigiteataja.ee/akt/PS), [KodS](https://www.riigiteataja.ee/akt/126062025008); eksami kontekst: [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) ja [Integratsiooni Sihtasutus](https://integratsioon.ee/kodakondsuseksam) (seotud ei ole)
 
-### Hoiatus (disclaimer)
-Küsimustepank on **kogukonna/õppematerjal** ja seda **ei hoita** ametlike eksamimuudatustega sünkroonis. Igaüks võib forki teha, muuta või uuesti avaldada. See **ei ole** ametlik [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) ega riigi toode. Päriseksami jaoks tugine ametlikele seadustekstidele ([**PS**](https://www.riigiteataja.ee/akt/PS), [**KodS**](https://www.riigiteataja.ee/akt/126062025008)) ja ametlikele materjalidele.
+### Hoiatus
+See on **õppe**pank. Seda **ei hoita** ametlike eksamimuudatustega sünkroonis ja see **ei ole** [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) ega riigi toode. Forki ja muuda. Päriseksami jaoks kasuta ametlikke seadustekste ([**PS**](https://www.riigiteataja.ee/akt/PS), [**KodS**](https://www.riigiteataja.ee/akt/126062025008)) ja ametlikke materjale.
 
 ### Litsents
-MIT litsents — vaata faili [`LICENSE`](LICENSE).
+MIT — fail [`LICENSE`](LICENSE).
 
 ---
 
 ## Русский
 
 ### Что это
-Бесплатный офлайн-дружественный тренажёр к экзамену на знание **Конституции Эстонской Республики и Закона о гражданстве** (kodakondsuse eksam). Сначала вопрос по-эстонски; после ответа — разбор по-русски. Прогресс хранится в браузере (`localStorage`).
+Тренажёр к экзамену на знание **Конституции ЭР и Закона о гражданстве** (kodakondsuse eksam). Вопрос по-эстонски, после ответа — разбор по-русски. Прогресс в браузере (`localStorage`), без сервера.
 
-### Попробовать
-- **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
-  На телефоне выберите «Добавить на главный экран» / «Установить», чтобы использовать как приложение.
-- **Этот репозиторий:** https://github.com/upyrj/eesti-kodakondsuse-eksam
+### Ссылки
+- **Сайт:** https://upyrj.github.io/eesti-kodakondsuse-eksam/  
+  На телефоне: «Добавить на экран» / Install — это PWA.
+- **Репозиторий:** https://github.com/upyrj/eesti-kodakondsuse-eksam
 
-### Локальный запуск
+### Как открыть у себя
 Сборка не нужна:
 
 ```bash
 open index.html
-# или
+
 python3 -m http.server 8080
+# затем http://127.0.0.1:8080
 ```
 
-Подойдёт [Cloudflare Pages](https://pages.cloudflare.com/) / [Netlify](https://www.netlify.com/) / [GitHub Pages](https://pages.github.com/) / любой статический хостинг (корень: `index.html` + `data/`).
+Подойдёт [Cloudflare Pages](https://pages.cloudflare.com/), [Netlify](https://www.netlify.com/), [GitHub Pages](https://pages.github.com/) или любой static host. Выкладывай корень репо (`index.html`, `data/`; для PWA ещё иконки и manifest).
 
 ### Банк вопросов
-- Встроен в `index.html` (`QUESTIONS`).
-- Отдельным файлом: `data/drill-bank-quality-v3.json` (525 вопросов).
+- Живой сайт крутит банк из `index.html` (`QUESTIONS`).
+- Тот же банк файлом: `data/drill-bank-quality-v3.json` (525 штук).
 
-### Пересборка (кратко)
-Отдельного публичного build-скрипта в пакете нет. Правите банк в `data/`, затем заменяете массив `QUESTIONS = [ ... ]` в `index.html` (или держите `data/` источником истины до встраивания).
+### Как править банк
+Отдельного build-скрипта нет. Правишь `data/drill-bank-quality-v3.json`, потом подставляешь массив `QUESTIONS = [ ... ]` в `index.html` (или считаешь `data/` источником и вшиваешь перед выкладкой).
 
-### Вклад / форк
-Форкайте свободно. Правки формулировок, дистракторов, доступности и упаковки приветствуются. Пожалуйста, оставляйте дисклеймер на виду.
+### Форк
+Форкайте как хотите. Правки формулировок, вариантов ответа, доступности — ок. Дисклеймер лучше оставить на виду.
 
-### Откуда взялось / результаты
-Использовали тренировочные задания и презентацию с консультаций к экзамену. Трое, кто готовился по этому материалу, сдали официальный экзамен **26 сентября 2026** на **23–24 из 24**.
+### Откуда это
+Собрано из тренировочных заданий и консультационной презентации к экзамену. Трое, кто готовился по этому материалу, **26 сентября 2026** сдали официальный экзамен на **23–24 из 24**.
 
-### Участники / источники
-- [Denis Ivanov](https://ivanov.in) — издатель сайта и банка
-- [Grok Bot Tõnu](https://x.ai/bot) — ассистент Cursor/Grok Bot, который вместе с [Денисом](https://ivanov.in) готовил и собрал тренажёр
-- Ссылки на закон: [PS](https://www.riigiteataja.ee/akt/PS), [KodS](https://www.riigiteataja.ee/akt/126062025008); контекст экзамена: материалы [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) и [материалы Integratsiooni Sihtasutus для подготовки к экзамену](https://integratsioon.ee/kodakondsuseksam) (официальной аффилиации нет)
+### Кто и откуда
+- [Denis Ivanov](https://ivanov.in) — сайт и банк
+- [Grok Bot Tõnu](https://x.ai/bot) — ассистент, с которым вместе собирали тренажёр ([Denis](https://ivanov.in))
+- Законы: [PS](https://www.riigiteataja.ee/akt/PS), [KodS](https://www.riigiteataja.ee/akt/126062025008); контекст экзамена: [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) и [Integratsiooni Sihtasutus](https://integratsioon.ee/kodakondsuseksam) (мы с ними не связаны)
 
-### Отказ от ответственности (disclaimer)
-Банк вопросов — **учебный/сообщественный материал** и **не синхронизируется** с официальными изменениями экзамена. Любой может форкнуть, менять или перепубликовать. Это **не** официальный продукт [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) или государства. Для настоящего экзамена опирайтесь на официальные тексты законов ([**PS**](https://www.riigiteataja.ee/akt/PS), [**KodS**](https://www.riigiteataja.ee/akt/126062025008)) и официальные материалы.
+### Дисклеймер
+Это **учебный** банк. Его **не** держат в актуальном виде под официальный экзамен, и это **не** продукт [Harno](https://www.harno.ee/eksamid-testid-ja-uuringud/eksamid-testid-ja-lopudokumendid/kodakondsuseksamid) / государства. Форкайте и меняйте. На настоящем экзамене опирайтесь на тексты законов ([**PS**](https://www.riigiteataja.ee/akt/PS), [**KodS**](https://www.riigiteataja.ee/akt/126062025008)) и официальные материалы.
 
 ### Лицензия
-Лицензия MIT — см. файл [`LICENSE`](LICENSE).
+MIT — файл [`LICENSE`](LICENSE).
