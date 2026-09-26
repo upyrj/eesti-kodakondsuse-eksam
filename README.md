@@ -153,16 +153,3 @@ python3 -m http.server 8080
 
 ### Лицензия
 Лицензия MIT — см. файл [`LICENSE`](LICENSE).
-
----
-
-## Layout
-
-```
-kodakondsuse-eksam-oss/
-  index.html                      # static app (bank inlined)
-  data/drill-bank-quality-v3.json # same bank as file
-  README.md                       # EN + ET + RU
-  LICENSE                        # MIT License
-  .gitignore
-```
