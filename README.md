@@ -15,6 +15,7 @@ A static, mobile-first practice site for the **Eesti Vabariigi põhiseaduse ja k
 
 ### Try it
 - **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
+  On phones, use “Add to Home Screen” / “Install” to use it as an app.
 - **This repository:** https://github.com/upyrj/eesti-kodakondsuse-eksam
 
 ### Run locally
@@ -68,6 +69,7 @@ Tasuta, võrguühenduseta sobiv treeningleht **Eesti Vabariigi põhiseaduse ja k
 
 ### Proovi
 - **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
+  Telefonis vali “Lisa avakuvale” / “Installi”, et kasutada seda rakendusena.
 - **See repositoorium:** https://github.com/upyrj/eesti-kodakondsuse-eksam
 
 ### Kohalik käivitamine
@@ -114,6 +116,7 @@ MIT litsents — vaata faili [`LICENSE`](LICENSE).
 
 ### Попробовать
 - **Live:** https://upyrj.github.io/eesti-kodakondsuse-eksam/
+  На телефоне выберите «Добавить на главный экран» / «Установить», чтобы использовать как приложение.
 - **Этот репозиторий:** https://github.com/upyrj/eesti-kodakondsuse-eksam
 
 ### Локальный запуск
